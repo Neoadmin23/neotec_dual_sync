@@ -172,6 +172,40 @@
       "label": "Rules",
       "fieldtype": "Table",
       "options": "Neotec Sync Rule"
+    },
+    {
+      "fieldname": "section_sync_status",
+      "label": "Sync Status",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "last_sync_time",
+      "label": "Last Sync Time",
+      "fieldtype": "Datetime",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_sync_status",
+      "label": "Last Sync Status",
+      "fieldtype": "Select",
+      "options": "\nSuccess\nFailed\nRunning",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_sync_message",
+      "label": "Last Sync Message",
+      "fieldtype": "Small Text",
+      "read_only": 1
+    },
+    {
+      "fieldname": "records_synced",
+      "label": "Records Synced",
+      "fieldtype": "Int",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_sync",
+      "fieldtype": "Column Break"
     }
   ],
   "permissions": [

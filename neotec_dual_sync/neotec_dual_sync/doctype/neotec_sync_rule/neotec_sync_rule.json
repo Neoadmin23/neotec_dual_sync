@@ -1,0 +1,105 @@
+{
+  "doctype": "DocType",
+  "name": "Neotec Sync Rule",
+  "module": "Neotec Dual Sync",
+  "custom": 0,
+  "istable": 1,
+  "issingle": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": "1",
+      "in_list_view": 1,
+      "columns": 1
+    },
+    {
+      "fieldname": "source_doctype",
+      "label": "Source DocType",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "reqd": 1,
+      "in_list_view": 1,
+      "columns": 3
+    },
+    {
+      "fieldname": "target_doctype",
+      "label": "Target DocType",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "reqd": 1,
+      "in_list_view": 1,
+      "columns": 3
+    },
+    {
+      "fieldname": "trigger_mode",
+      "label": "Trigger Mode",
+      "fieldtype": "Select",
+      "options": "On Submit\nBatch\nBoth\nManual",
+      "default": "On Submit",
+      "in_list_view": 1,
+      "columns": 2
+    },
+    {
+      "fieldname": "route_policy",
+      "label": "Route Policy",
+      "fieldtype": "Link",
+      "options": "Neotec Sync Route Policy"
+    },
+    {
+      "fieldname": "mapping_profile",
+      "label": "Mapping Profile",
+      "fieldtype": "Link",
+      "options": "Neotec Sync Mapping"
+    },
+    {
+      "fieldname": "duplicate_policy",
+      "label": "Duplicate Policy",
+      "fieldtype": "Select",
+      "options": "Reject Duplicate\nSkip If Unchanged\nUpdate Existing\nCreate Conflict Record",
+      "default": "Skip If Unchanged"
+    },
+    {
+      "fieldname": "only_when_submitted",
+      "label": "Only When Submitted",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "condition_script",
+      "label": "Condition Script",
+      "fieldtype": "Code",
+      "options": "Python"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    }
+  ]
+}

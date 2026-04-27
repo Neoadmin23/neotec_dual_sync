@@ -1,0 +1,17 @@
+[
+  {
+    "doctype": "Role",
+    "role_name": "Neotec Dual Sync Manager",
+    "desk_access": 1
+  },
+  {
+    "doctype": "Role",
+    "role_name": "Neotec Dual Sync User",
+    "desk_access": 1
+  },
+  {
+    "doctype": "Role",
+    "role_name": "Neotec Dual Sync API",
+    "desk_access": 0
+  }
+]

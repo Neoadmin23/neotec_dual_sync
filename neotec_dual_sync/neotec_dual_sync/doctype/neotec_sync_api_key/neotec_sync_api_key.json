@@ -1,0 +1,88 @@
+{
+  "doctype": "DocType",
+  "name": "Neotec Sync API Key",
+  "module": "Neotec Dual Sync",
+  "custom": 0,
+  "istable": 0,
+  "issingle": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldname": "instance",
+      "label": "Instance",
+      "fieldtype": "Link",
+      "options": "Neotec Sync Instance",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "api_key",
+      "label": "API Key",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "api_secret",
+      "label": "API Secret",
+      "fieldtype": "Password",
+      "reqd": 1
+    },
+    {
+      "fieldname": "shared_secret",
+      "label": "Shared Secret",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "active",
+      "label": "Active",
+      "fieldtype": "Check",
+      "default": "1",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "allowed_doctypes",
+      "label": "Allowed DocTypes",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "signature_required",
+      "label": "Signature Required",
+      "fieldtype": "Check",
+      "default": "1"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync User",
+      "read": 1,
+      "export": 1
+    }
+  ]
+}

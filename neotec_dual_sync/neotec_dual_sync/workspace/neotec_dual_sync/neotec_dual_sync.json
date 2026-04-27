@@ -1,0 +1,10 @@
+{
+  "doctype": "Workspace",
+  "name": "Neotec Dual Sync",
+  "module": "Neotec Dual Sync",
+  "label": "Neotec Dual Sync",
+  "public": 1,
+  "title": "Neotec Dual Sync",
+  "icon": "refresh",
+  "content": "[{\"id\":\"shortcuts\",\"type\":\"shortcut\",\"data\":{\"shortcuts\":[{\"label\":\"Settings\",\"url\":\"/app/neotec-sync-settings\",\"doc_view\":\"\"},{\"label\":\"Sync Logs\",\"url\":\"/app/neotec-sync-log\",\"doc_view\":\"\"},{\"label\":\"Conflicts\",\"url\":\"/app/neotec-sync-conflict\",\"doc_view\":\"\"},{\"label\":\"Instances\",\"url\":\"/app/neotec-sync-instance\",\"doc_view\":\"\"},{\"label\":\"Mappings\",\"url\":\"/app/neotec-sync-mapping\",\"doc_view\":\"\"},{\"label\":\"Route Policies\",\"url\":\"/app/neotec-sync-route-policy\",\"doc_view\":\"\"},{\"label\":\"API Keys\",\"url\":\"/app/neotec-sync-api-key\",\"doc_view\":\"\"},{\"label\":\"Idempotency Log\",\"url\":\"/app/neotec-sync-idempotency-log\",\"doc_view\":\"\"}]}}]"
+}

@@ -1,0 +1,115 @@
+{
+  "doctype": "DocType",
+  "name": "Neotec Sync Log",
+  "module": "Neotec Dual Sync",
+  "custom": 0,
+  "istable": 0,
+  "issingle": 0,
+  "engine": "InnoDB",
+  "track_changes": 0,
+  "is_submittable": 0,
+  "sort_field": "creation",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldname": "reference_doctype",
+      "label": "Reference DocType",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "in_list_view": 1,
+      "columns": 2
+    },
+    {
+      "fieldname": "reference_name",
+      "label": "Reference Name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "columns": 2
+    },
+    {
+      "fieldname": "event_name",
+      "label": "Event",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "columns": 1
+    },
+    {
+      "fieldname": "direction",
+      "label": "Direction",
+      "fieldtype": "Select",
+      "options": "Outbound\nInbound",
+      "in_list_view": 1,
+      "columns": 1
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Queued\nProcessing\nSuccess\nFailed\nSkipped\nDuplicate\nBlocked\nLoop Prevented\nReceived",
+      "default": "Queued",
+      "in_list_view": 1,
+      "columns": 2
+    },
+    {
+      "fieldname": "sync_transaction_id",
+      "label": "Transaction ID",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "columns": 2
+    },
+    {
+      "fieldname": "source_instance_id",
+      "label": "Source Instance",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "rule_name",
+      "label": "Rule",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "retry_count",
+      "label": "Retry Count",
+      "fieldtype": "Int",
+      "default": "0"
+    },
+    {
+      "fieldname": "section_payloads",
+      "label": "Payloads",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "request_payload",
+      "label": "Request Payload",
+      "fieldtype": "Code",
+      "options": "JSON"
+    },
+    {
+      "fieldname": "response_payload",
+      "label": "Response Payload",
+      "fieldtype": "Code",
+      "options": "JSON"
+    },
+    {
+      "fieldname": "error_message",
+      "label": "Error Message",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1, "write": 1, "create": 1, "delete": 1,
+      "share": 1, "print": 1, "email": 1, "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync Manager",
+      "read": 1, "write": 1, "create": 1, "delete": 1,
+      "share": 1, "print": 1, "email": 1, "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync User",
+      "read": 1, "export": 1
+    }
+  ]
+}

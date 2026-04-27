@@ -1,0 +1,206 @@
+{
+  "doctype": "DocType",
+  "name": "Neotec Sync Settings",
+  "module": "Neotec Dual Sync",
+  "custom": 0,
+  "istable": 0,
+  "issingle": 1,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "instance_role",
+      "label": "Instance Role",
+      "fieldtype": "Select",
+      "options": "Source\nTarget\nBoth",
+      "reqd": 1,
+      "default": "Source"
+    },
+    {
+      "fieldname": "local_instance_id",
+      "label": "Local Instance ID",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "accept_inbound_sync",
+      "label": "Accept Inbound Sync",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "allow_outbound_sync",
+      "label": "Allow Outbound Sync",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "prevent_loopback",
+      "label": "Prevent Loopback",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "max_hop_count",
+      "label": "Max Hop Count",
+      "fieldtype": "Int",
+      "default": "3"
+    },
+    {
+      "fieldname": "section_api",
+      "label": "API Configuration",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "remote_base_url",
+      "label": "Remote Base URL",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "api_key",
+      "label": "API Key",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "api_secret",
+      "label": "API Secret",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "shared_secret",
+      "label": "Shared Secret",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "column_break_1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "verify_ssl",
+      "label": "Verify SSL",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "timeout_seconds",
+      "label": "Timeout (Seconds)",
+      "fieldtype": "Int",
+      "default": "30"
+    },
+    {
+      "fieldname": "default_trigger_mode",
+      "label": "Default Trigger Mode",
+      "fieldtype": "Select",
+      "options": "On Submit\nBatch\nBoth\nManual",
+      "default": "On Submit"
+    },
+    {
+      "fieldname": "signature_required",
+      "label": "Require Signed Requests",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "section_queue",
+      "label": "Queue & Retry",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "batch_size",
+      "label": "Batch Size",
+      "fieldtype": "Int",
+      "default": "100"
+    },
+    {
+      "fieldname": "max_retries",
+      "label": "Max Retries",
+      "fieldtype": "Int",
+      "default": "3"
+    },
+    {
+      "fieldname": "retry_interval_minutes",
+      "label": "Retry Interval (Minutes)",
+      "fieldtype": "Int",
+      "default": "10"
+    },
+    {
+      "fieldname": "column_break_2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "enable_audit_snapshot",
+      "label": "Enable Audit Snapshot",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "mask_secrets_in_logs",
+      "label": "Mask Secrets in Logs",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "allow_delete_sync",
+      "label": "Allow Delete Sync",
+      "fieldtype": "Check",
+      "default": "0"
+    },
+    {
+      "fieldname": "dry_run_mode",
+      "label": "Dry Run Mode",
+      "fieldtype": "Check",
+      "default": "0"
+    },
+    {
+      "fieldname": "log_level",
+      "label": "Log Level",
+      "fieldtype": "Select",
+      "options": "INFO\nWARN\nERROR\nDEBUG",
+      "default": "INFO"
+    },
+    {
+      "fieldname": "rules",
+      "label": "Rules",
+      "fieldtype": "Table",
+      "options": "Neotec Sync Rule"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync User",
+      "read": 1,
+      "export": 1
+    }
+  ]
+}

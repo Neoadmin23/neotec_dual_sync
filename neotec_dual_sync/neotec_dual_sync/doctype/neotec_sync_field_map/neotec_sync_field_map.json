@@ -1,0 +1,88 @@
+{
+  "doctype": "DocType",
+  "name": "Neotec Sync Field Map",
+  "module": "Neotec Dual Sync",
+  "custom": 0,
+  "istable": 1,
+  "issingle": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldname": "source_field",
+      "label": "Source Field",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1,
+      "columns": 2
+    },
+    {
+      "fieldname": "target_field",
+      "label": "Target Field",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1,
+      "columns": 2
+    },
+    {
+      "fieldname": "mapping_type",
+      "label": "Mapping Type",
+      "fieldtype": "Select",
+      "options": "Direct\nStatic Value\nScripted Transform\nIgnore",
+      "default": "Direct",
+      "in_list_view": 1,
+      "columns": 2
+    },
+    {
+      "fieldname": "required_in_target",
+      "label": "Required in Target",
+      "fieldtype": "Check",
+      "default": "0",
+      "columns": 1
+    },
+    {
+      "fieldname": "default_value",
+      "label": "Default Value",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "transform_script",
+      "label": "Transform Script",
+      "fieldtype": "Code",
+      "options": "Python"
+    },
+    {
+      "fieldname": "target_data_type",
+      "label": "Target Data Type",
+      "fieldtype": "Select",
+      "options": "Data\nInt\nFloat\nCurrency\nDate\nDatetime\nCheck\nLink\nText\nJSON"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    }
+  ]
+}

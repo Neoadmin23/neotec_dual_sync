@@ -1,0 +1,96 @@
+{
+  "doctype": "DocType",
+  "name": "Neotec Sync Idempotency Log",
+  "module": "Neotec Dual Sync",
+  "custom": 0,
+  "istable": 0,
+  "issingle": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldname": "source_instance_id",
+      "label": "Source Instance ID",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "source_doctype",
+      "label": "Source DocType",
+      "fieldtype": "Link",
+      "options": "DocType",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "source_docname",
+      "label": "Source DocName",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "sync_transaction_id",
+      "label": "Sync Transaction ID",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "payload_hash",
+      "label": "Payload Hash",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "target_docname",
+      "label": "Target DocName",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "Processed\nDuplicate\nBlocked\nFailed",
+      "default": "Processed"
+    },
+    {
+      "fieldname": "processed_on",
+      "label": "Processed On",
+      "fieldtype": "Datetime"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync User",
+      "read": 1,
+      "export": 1
+    }
+  ]
+}

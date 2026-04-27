@@ -1,0 +1,83 @@
+{
+  "doctype": "DocType",
+  "name": "Neotec Sync Instance",
+  "module": "Neotec Dual Sync",
+  "custom": 0,
+  "istable": 0,
+  "issingle": 0,
+  "engine": "InnoDB",
+  "track_changes": 1,
+  "is_submittable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "fields": [
+    {
+      "fieldname": "instance_name",
+      "label": "Instance Name",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "instance_id",
+      "label": "Instance ID",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "base_url",
+      "label": "Base URL",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "role_type",
+      "label": "Role Type",
+      "fieldtype": "Select",
+      "options": "Source\nTarget\nBoth",
+      "default": "Target"
+    },
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": "1"
+    },
+    {
+      "fieldname": "allowed_ip_list",
+      "label": "Allowed IP List",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1,
+      "export": 1
+    },
+    {
+      "role": "Neotec Dual Sync User",
+      "read": 1,
+      "export": 1
+    }
+  ]
+}

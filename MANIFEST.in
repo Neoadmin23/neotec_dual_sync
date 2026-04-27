@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+recursive-include neotec_dual_sync/public *
+recursive-include neotec_dual_sync/templates *
+recursive-include neotec_dual_sync/neotec_dual_sync/doctype *.json *.js *.py
+recursive-include neotec_dual_sync/neotec_dual_sync/workspace *.json
+recursive-include fixtures *.json
